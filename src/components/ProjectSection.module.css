@@ -1,0 +1,127 @@
+.projectSection {
+    width: 100%;
+    padding: 6rem 0 4rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  }
+  
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .badge {
+    display: inline-block;
+    background: #22c55e;
+    color: white;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+  }
+  
+  .subheading {
+    font-size: 1.125rem;
+    max-width: 640px;
+    color: #6b7280;
+    margin: 0 auto;
+  }
+  
+  .projectGrid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 2rem;
+  }
+  
+  .projectCard {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .projectCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .imageArea img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .contentArea {
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+  
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: #22c55e;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tag {
+    background: rgba(34, 197, 94, 0.1);
+    color: #166534;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+  }
+  
+  .year {
+    color: #6b7280;
+  }
+  
+  .projectTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0.5rem 0;
+  }
+  
+  .projectDesc {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
+  }
+  
+  .ctaWrapper {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .btnPrimary {
+    display: inline-block;
+    background: #22c55e;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(34,197,94,0.15);
+    transition: background 0.25s;
+  }
+  
+  .btnPrimary:hover {
+    background: #16a34a;
+  }
+  
