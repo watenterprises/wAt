@@ -5,6 +5,8 @@ import AboutSection from '../components/AboutSection';
 import ProjectSection from '../components/ProjectSection';
 import ContactSection from '../components/ContactSection';
 import FooterSection from '../components/FooterSection';
+import ServiceSection from '../components/ServiceSection';
+import TestimonialsSection from '../components/TestimonialsSection';
 
 function Home() {
   const [count, setCount] = useState(0)
@@ -15,6 +17,8 @@ function Home() {
       <HeroSection/>
       <AboutSection/>
       <ProjectSection/>
+      <ServiceSection/>
+      <TestimonialsSection/>
       <ContactSection/>
       <FooterSection/>
     </>

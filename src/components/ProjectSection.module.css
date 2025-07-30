@@ -1,127 +1,261 @@
 .projectSection {
-    width: 100%;
-    padding: 6rem 0 4rem;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  }
-  
-  .container {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-  
-  .sectionHeader {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  
-  .badge {
-    display: inline-block;
-    background: #22c55e;
-    color: white;
-    padding: 0.4rem 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    border-radius: 20px;
-    margin-bottom: 1rem;
-  }
-  
-  .heading {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 0.75rem;
-  }
-  
-  .subheading {
-    font-size: 1.125rem;
-    max-width: 640px;
-    color: #6b7280;
-    margin: 0 auto;
-  }
-  
-  .projectGrid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin-top: 2rem;
-  }
-  
-  .projectCard {
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-  }
-  .projectCard:hover {
-    transform: translateY(-5px);
-  }
-  
-  .imageArea img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .contentArea {
-    padding: 1.25rem 1.5rem 1.5rem;
-  }
-  
-  .meta {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.875rem;
-    color: #22c55e;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-  
-  .tag {
-    background: rgba(34, 197, 94, 0.1);
-    color: #166534;
-    padding: 0.2rem 0.6rem;
-    border-radius: 12px;
-  }
-  
-  .year {
-    color: #6b7280;
-  }
-  
-  .projectTitle {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #0f172a;
-    margin: 0.5rem 0;
-  }
-  
-  .projectDesc {
-    font-size: 0.95rem;
-    color: #4b5563;
-    line-height: 1.5;
-  }
-  
-  .ctaWrapper {
-    text-align: center;
-    margin-top: 3rem;
-  }
-  
-  .btnPrimary {
-    display: inline-block;
-    background: #22c55e;
-    color: white;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    text-decoration: none;
-    box-shadow: 0 6px 24px rgba(34,197,94,0.15);
-    transition: background 0.25s;
-  }
-  
-  .btnPrimary:hover {
-    background: #16a34a;
-  }
-  
+  width: 100%;
+  padding: 7rem 0 5rem;
+  position: relative;
+  background: linear-gradient(120deg, #18181b 0%, #262626 100%);
+  z-index: 1;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.bgGlow {
+  position: absolute;
+  top: -180px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 820px;
+  height: 320px;
+  background: radial-gradient(ellipse 60% 42% at 50% 0, #6366f180 0%, transparent 85%);
+  filter: blur(22px);
+  opacity: 0.85;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.75rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Header */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  background: linear-gradient(90deg, #6366f1 65%, #a5b4fc 100%);
+  color: #fff;
+  padding: 0.38rem 1rem 0.38rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 40px;
+  margin-bottom: 1.3rem;
+  box-shadow: 0 3px 14px #6366f13a;
+  letter-spacing: 0.05em;
+}
+.badge svg { display: inline-block; margin-right: 4px; }
+
+.heading {
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.03em;
+}
+.indigoTextGlow {
+  color: #6366f1;
+  background: linear-gradient(90deg,#6366f1 20%,#818cf8 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 18px #6366f125);
+  letter-spacing: 0.01em;
+}
+.subheading {
+  font-size: 1.22rem;
+  max-width: 680px;
+  margin: 0 auto;
+  color: #babff2;
+  text-shadow: 0 2px 18px #23235609;
+  line-height: 1.6;
+}
+.mobileBreak {
+  display: none;
+}
+@media (max-width: 600px) { .mobileBreak { display: inline; } }
+
+/* Grid */
+.projectGrid {
+  display: grid;
+  gap: 2.3rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin-top: 2rem;
+}
+.projectCard {
+  background: rgba(36,37,51,0.88);
+  border-radius: 20px;
+  box-shadow: 0 8px 40px #6366f122, 0 1.25px 16px #23233a14;
+  transition: transform 0.32s cubic-bezier(.86,.01,.31,.99), box-shadow 0.25s;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 410px;
+  cursor: pointer;
+  perspective: 700px;
+}
+.projectCard:hover, .projectCard:focus-within {
+  transform: translateY(-8px) scale(1.03) rotateY(-2.7deg);
+  box-shadow: 0 18px 56px #6366f13a, 0 8px 30px #18181b15;
+}
+.projectCard:hover .cardBlurBg {
+  opacity: 1;
+  filter: blur(8px) brightness(1.08) saturate(1.2);
+}
+.projectCard:hover .floatingTag {
+  transform: scale(1.09) translateY(-8px) rotate(-7deg);
+  box-shadow: 0 10px 24px #6366f13c;
+}
+
+/* Project Image Area */
+.imageArea {
+  position: relative;
+  width: 100%;
+  height: 215px;
+  overflow: hidden;
+  border-bottom: 1.5px solid #6366f151;
+}
+.imageArea img {
+  width: 100%;
+  height: 215px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  filter: brightness(0.94) contrast(1.03) saturate(1.1);
+  transition: filter 0.24s;
+}
+.cardBlurBg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+  background: radial-gradient(ellipse 120% 90% at 70% 70%, #6366f140 0%, transparent 84%);
+  opacity: 0.85;
+  filter: blur(11px) brightness(1.03);
+  transition: opacity 0.38s, filter 0.33s;
+  pointer-events: none;
+}
+
+.floatingTag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  background: linear-gradient(90deg, #6366f1 65%, #a5b4fc 100%);
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 14px;
+  padding: 0.36em 1em;
+  box-shadow: 0 4px 18px #6366f145;
+  transform: scale(1) translateY(0) rotate(-4deg);
+  transition: all 0.26s cubic-bezier(.84,.09,.24,.98);
+  text-shadow: 0 2px 12px #31318b28;
+}
+
+/* Project Card Content */
+.contentArea {
+  padding: 1.45rem 1.6rem 1.85rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.96rem;
+  color: #6366f1;
+  font-weight: 500;
+  margin-bottom: 0rem;
+  gap: 8px;
+}
+.year {
+  color: #c7d2fe;
+  font-size: 1.01rem;
+  font-weight: 700;
+  background: #6366f110;
+  border-radius: 7px;
+  padding: 0.11em 0.7em;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 8px #6366f13a;
+}
+.projectTitle {
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 1.05rem 0 0.38rem 0;
+  line-height: 1.17;
+  letter-spacing: -0.01em;
+  transition: color 0.15s;
+}
+.projectCard:hover .projectTitle {
+  color: #a5b4fc;
+}
+.projectDesc {
+  font-size: 1rem;
+  color: #e0e6fb;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 0;
+  letter-spacing: 0.01em;
+}
+
+/* CTA Button */
+.ctaWrapper {
+  text-align: center;
+  margin-top: 3.6rem;
+}
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.83em;
+  background: linear-gradient(92deg, #6366f1 80%, #818cf8 100%);
+  color: white;
+  font-weight: 700;
+  padding: 0.9rem 2.0rem;
+  border-radius: 999px;
+  font-size: 1.12rem;
+  text-decoration: none;
+  box-shadow: 0 8px 26px #6366f144;
+  transition: background 0.22s, transform 0.18s, box-shadow 0.21s;
+  letter-spacing: 0.03em;
+  border: none;
+  outline: none;
+}
+.btnPrimary svg { margin-left: 4px; }
+.btnPrimary:hover, .btnPrimary:focus {
+  background: linear-gradient(100deg, #4f46e5 30%, #6366f1 100%);
+  box-shadow: 0 10px 38px #6366f199, 0 4px 12px #23233a18;
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 1024px) {
+  .projectSection { padding: 4.5rem 0 2.7rem; }
+  .container { padding: 0 1rem; }
+  .sectionHeader { margin-bottom: 2.3rem; }
+  .projectGrid { gap: 1.5rem; }
+}
+@media (max-width: 700px) {
+  .sectionHeader { margin-bottom: 2.0rem; }
+  .badge { font-size: 0.96rem; }
+}
+@media (max-width: 500px) {
+  .heading { font-size: 2rem; }
+  .projectSection { padding: 2.5rem 0 1.1rem; }
+  .btnPrimary { padding: 0.8rem 1.3rem; font-size: 1rem; }
+  .container { padding: 0 0.4rem; }
+  .projectGrid { gap: 1.1rem; }
+  .contentArea { padding: 1.12rem 0.9rem 1.35rem; }
+}
+
+body { background: #18181b; }

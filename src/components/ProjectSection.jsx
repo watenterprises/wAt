@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // ✅ Add this
+import { Link } from 'react-router-dom';
 import styles from './ProjectSection.module.css';
 
 const projects = [
@@ -26,27 +26,41 @@ const projects = [
   }
 ];
 
+const palette = {
+  indigo: "#6366f1",
+  indigoLight: "#a5b4fc"
+};
+
 const ProjectSection = () => {
   return (
     <section className={styles.projectSection}>
+      <div className={styles.bgGlow}></div>
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
-          <span className={styles.badge}>Projects</span>
-          <h2 className={styles.heading}>Our Recent Work</h2>
+          <span className={styles.badge}>
+            <svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16">
+              <circle cx="8" cy="8" r="8" fill="#6366f1"/>
+              <circle cx="8" cy="8" r="4" fill="#fff" opacity="0.6"/>
+            </svg>
+            Projects
+          </span>
+          <h2 className={styles.heading}>
+            Our <span className={styles.indigoTextGlow}>Recent Work</span>
+          </h2>
           <p className={styles.subheading}>
-            Projects that drove extraordinary pipeline and predictable revenue.
+            Projects that drove extraordinary pipeline<br className={styles.mobileBreak}/> and predictable revenue.
           </p>
         </div>
-
         <div className={styles.projectGrid}>
           {projects.map((proj, idx) => (
             <div key={idx} className={styles.projectCard}>
               <div className={styles.imageArea}>
-                <img src={proj.image} alt={proj.title} />
+                <img src={proj.image} alt={proj.title}/>
+                <div className={styles.cardBlurBg} />
+                <span className={styles.floatingTag}>{proj.tag}</span>
               </div>
               <div className={styles.contentArea}>
                 <div className={styles.meta}>
-                  <span className={styles.tag}>{proj.tag}</span>
                   <span className={styles.year}>{proj.year}</span>
                 </div>
                 <h3 className={styles.projectTitle}>{proj.title}</h3>
@@ -55,11 +69,12 @@ const ProjectSection = () => {
             </div>
           ))}
         </div>
-
-        {/* ✅ Use Link instead of <a> */}
         <div className={styles.ctaWrapper}>
           <Link to="/projects" className={styles.btnPrimary}>
-            Explore More Projects →
+            <span>Explore More Projects</span>
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <path d="M7 10h6M11 6l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
           </Link>
         </div>
       </div>
