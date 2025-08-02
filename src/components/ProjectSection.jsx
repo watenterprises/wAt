@@ -8,24 +8,23 @@ const projects = [
     description: 'Account-based demand gen strategy that resulted in 200% increase in inbound calls.',
     tag: 'B2B SaaS',
     year: '2024',
-    image: '/projects/cpp.png'
+    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
   },
   {
     title: 'LogicFlow — Performance SEO',
     description: 'Built a content-led SEO engine that increased lead volume by 350%.',
     tag: 'Tech',
     year: '2023',
-    image: '/projects/logicflow.png'
+    image: 'https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
   },
   {
     title: 'Finora — Funnels & Ads',
     description: 'Scaled paid LinkedIn and Google campaigns across EMEA to drive MQL growth.',
     tag: 'Finance',
     year: '2024',
-    image: '/projects/finora.png'
+    image: 'https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
   }
 ];
-
 const palette = {
   indigo: "#6366f1",
   indigoLight: "#a5b4fc"

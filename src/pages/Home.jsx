@@ -7,6 +7,7 @@ import ContactSection from '../components/ContactSection';
 import FooterSection from '../components/FooterSection';
 import ServiceSection from '../components/ServiceSection';
 import TestimonialsSection from '../components/TestimonialsSection';
+import BlogSection from '../components/BlogSection';
 
 function Home() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function Home() {
       <ProjectSection/>
       <ServiceSection/>
       <TestimonialsSection/>
+      <BlogSection/>
       <ContactSection/>
       <FooterSection/>
     </>

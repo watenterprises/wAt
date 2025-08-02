@@ -1,0 +1,226 @@
+.section {
+    position: relative;
+    background: linear-gradient(101deg, #f8fafc 65%, #818cf8 140%);
+    padding: 7rem 1rem 8rem;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .bgFX {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  }
+  .blob1, .blob2 {
+    position: absolute;
+    border-radius: 60% 40% 56% 44% / 38% 51% 49% 62%;
+    filter: blur(38px);
+    opacity: 0.16;
+  }
+  .blob1 {
+    width: 430px; height: 340px; left: -120px; top: -90px;
+    background: radial-gradient(ellipse at 50% 50%, #6366f1 10%, #818cf8 60%, transparent 100%);
+  }
+  .blob2 {
+    width: 290px; height: 290px; right: -90px; bottom: -30px;
+    background: radial-gradient(ellipse at 70% 80%, #c7d2fe 10%, #6366f1 70%, transparent 100%);
+  }
+  
+  .container {
+    max-width: 1200px; margin: 0 auto; width: 100%;
+    position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 3.3rem;
+  }
+  
+  .badge {
+    display: inline-block;
+    background: #6366f1;
+    color: #fff;
+    font-size: 1rem; font-weight: 700;
+    border-radius: 2em; padding: 0.38em 1.11em 0.32em 0.7em;
+    letter-spacing: 0.05em; margin-bottom: 0.85rem;
+    box-shadow: 0 2px 8px #6366f138;
+  }
+  
+  .heading {
+    font-size: 2.4rem; font-weight: 800;
+    color: #150e2d; margin-bottom: 0.2rem; letter-spacing: -0.03em;
+  }
+  .gradient {
+    background: linear-gradient(90deg, #a5b4fc 10%, #6366f1 90%);
+    background-clip: text; -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; color: #6366f1;
+  }
+  .subhead {
+    color: #6366f1;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.57;
+    margin: 0 auto;
+    max-width: 460px;
+  }
+  .brand { color: #6366f1; font-weight: bold; }
+  
+  .blogGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.7rem;
+    width: 100%;
+    margin-top: 2.2rem;
+  }
+  @media (max-width: 1020px) {
+    .blogGrid { grid-template-columns: 1fr 1fr; gap: 1.3rem; }
+  }
+  @media (max-width: 720px) {
+    .blogGrid { grid-template-columns: 1fr; gap: 1.1rem; margin-top: 1.3rem;}
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 2.2rem;
+    overflow: hidden;
+    box-shadow: 0 8px 32px #6366f120, 0 2px 12px #818cf820;
+    transition: transform .23s cubic-bezier(.7,.1,.31,.97), box-shadow .33s;
+    position: relative;
+    text-decoration: none;
+    min-width: 0;
+  }
+  .card:hover, .card:focus {
+    transform: translateY(-7px) scale(1.035);
+    box-shadow: 0 18px 54px #6366f144, 0 6px 24px #818cf844;
+    outline: none;
+  }
+  
+  /* Blog Cover Image + Ribbon */
+  .imageWrap {
+    position: relative; width: 100%; height: 202px; overflow: visible;
+    background: #eceafe;
+  }
+  .imageWrap img {
+    width: 100%; height: 202px;
+    object-fit: cover;
+    border-bottom: 2.5px solid #6366f1;
+    border-radius: 2.2rem 2.2rem 0 0;
+    box-shadow: 0 10px 24px #6366f11a;
+  }
+  .ribbon {
+    position: absolute;
+    top: 19px; left: -20px; z-index: 2;
+    background: linear-gradient(95deg, #6366f1 60%, #818cf8 100%);
+    color: #fff;
+    font-size: 0.92rem; font-weight: 700;
+    padding: 0.3em 1.2em 0.25em 1.25em;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px #6366f136;
+    transform: rotate(-11deg);
+    letter-spacing: 0.09em;
+    user-select: none;
+  }
+  
+  /* Card Content */
+  .content {
+    padding: 1.6rem 1.4rem 1.2rem 1.4rem;
+    display: flex; flex-direction: column;
+    flex-grow: 1;
+  }
+  .tagsRow {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 0.43rem;
+    margin-bottom: 0.7rem;
+  }
+  .tagChip {
+    background: linear-gradient(70deg, #ededfa 62%, #a5b4fc 100%);
+    color: #6366f1;
+    font-weight: 700; font-size: 0.81em;
+    border-radius: 19px; padding: 0.25em 0.9em;
+    letter-spacing: 0.06em;
+    box-shadow: 0 1px 6px #6366f115;
+    user-select: none;
+  }
+  .date {
+    margin-left: auto;
+    color: #818cf8;
+    font-size: 0.98em;
+    font-weight: 500;
+    background: #eceafe;
+    border-radius: 12px;
+    padding: 0.24em 0.8em;
+  }
+  
+  .title {
+    font-size: 1.25rem; font-weight: 800;
+    color: #1e223c;
+    margin: 0.12em 0 0.4rem; line-height: 1.24;
+  }
+  .excerpt {
+    font-size: 1.04rem; color: #393964; font-weight: 500;
+    margin-bottom: 1.1rem;
+    line-height: 1.48;
+    min-height: 54px;
+  }
+  .metaRow {
+    margin-top: auto; display: flex; align-items: center; gap: 0.55em;
+  }
+  .authorAvatar {
+    width: 32px; height: 32px; border-radius: 50%; object-fit: cover;
+    background: #fff; box-shadow: 0 1px 7px #6366f117;
+  }
+  .author {
+    color: #6366f1; font-weight: 700; font-size: 0.96em; margin-right: 0.48em;
+  }
+  .arrow {
+    font-size: 1.25em; color: #6366f1; margin-left: auto; font-weight: bold;
+    transition: transform .18s;
+  }
+  .card:hover .arrow { transform: translateX(7px); }
+  
+  .ctaRow {
+    text-align: center;
+    margin-top: 3.6rem;
+  }
+  .ctaBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    background: linear-gradient(90deg, #6366f1 80%, #818cf8 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 0.99rem 2.4rem;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 8px 26px #6366f144;
+    border: none;
+    outline: none;
+    transition: background 0.16s, transform 0.13s, box-shadow 0.14s;
+    letter-spacing: 0.02em;
+    position: relative;
+  }
+  .ctaBtn:hover, .ctaBtn:focus {
+    background: linear-gradient(100deg, #4f46e5 30%, #6366f1 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.06);
+  }
+  
+  .ctaArrow { font-size: 1.25em; margin-left: 4px; }
+  
+  /* Mobile styles */
+  @media (max-width: 500px) {
+    .section { padding: 3.2rem 0.23rem 4rem; }
+    .container { padding: 0 0.2rem; }
+    .badge { font-size: 0.93rem;}
+    .heading { font-size: 1.23rem;}
+    .blogGrid { gap: 0.7rem; }
+    .card { border-radius: 1.2rem; }
+    .imageWrap, .imageWrap img { height: 116px; border-radius: 1.2rem 1.2rem 0 0;}
+    .content { padding: 0.83rem 0.7rem 0.9rem 0.7rem;}
+    .title { font-size: 1rem; line-height: 1.18; }
+    .excerpt { font-size: 0.98rem; min-height: unset; }
+    .authorAvatar { width: 23px; height: 23px;}
+    .metaRow { font-size: 0.93em; }
+    .ribbon { top: 7px; left: -12px; font-size: 0.81em; border-radius: 8px;}
+  }
+  
