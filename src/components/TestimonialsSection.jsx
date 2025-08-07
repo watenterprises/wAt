@@ -20,7 +20,7 @@ const testimonials = [
     name: 'Pradeep Kumar',
     title: 'Founder, VibeWoods',
     text: 'Their professionalism and design expertise helped us grow our local presence significantly.',
-    image: '/Vibewoodslogo.png',
+    image: '/vibewoods.png',
     rating: 5,
   },
 ];

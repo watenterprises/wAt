@@ -52,7 +52,7 @@ const projects = [
     description: 'Built a sleek two-wheeler dealership website highlighting product catalogs, service info, and contact features.',
     tag: 'Automobile',
     year: '2025',
-    image: '/a5logo.png',
+    image: '/public/a5logo.png',
     link: 'https://www.a5motors.in/'
   },
   {
