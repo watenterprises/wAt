@@ -6,24 +6,25 @@ const testimonials = [
     name: 'Somashekar',
     title: 'Founder, KDM Construction',
     text: 'wAt transformed our website and brand. Our inquiries doubled within months!',
-    image: '../src/assets/kdmlogo.png',
+    image: '/kdmlogo.png',
     rating: 5,
   },
   {
     name: 'Naveen',
     title: 'Owner, NV Fit Hub',
     text: 'Creative, fast delivery with fantastic results. Highly recommend wAt for growth!',
-    image: '../src/assets/nvfithub.png',
+    image: '/nvfithub.png',
     rating: 5,
   },
   {
     name: 'Pradeep Kumar',
     title: 'Founder, VibeWoods',
     text: 'Their professionalism and design expertise helped us grow our local presence significantly.',
-    image: '../src/assets/Vibewoodslogo.png',
+    image: '/Vibewoodslogo.png',
     rating: 5,
   },
 ];
+
 
 function Stars({ count }) {
   return (

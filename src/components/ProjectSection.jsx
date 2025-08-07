@@ -8,7 +8,7 @@ const projects = [
     description: 'Built a premium construction company website with a modern UI, interactive layouts, and responsive design.',
     tag: 'Real Estate',
     year: '2025',
-    image: '../src/assets/kdm.png',
+    image: '/kdm.png',
     link: 'https://kdm-construction.vercel.app/'
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     description: 'Designed and developed a holistic wellness and spa platform with elegant visuals and smooth navigation.',
     tag: 'Wellness',
     year: '2025',
-    image: '../src/assets/Ayatti.png',
+    image: '/Ayatti.png',
     link: 'https://ayattiwellness.life/'
   },
   {
@@ -24,10 +24,11 @@ const projects = [
     description: 'Developed a robust academic support portal for PhD scholars, focusing on UX clarity and lead generation.',
     tag: 'Education',
     year: '2025',
-    image: '../src/assets/phd.png',
+    image: '/phd.png',
     link: 'https://phdresearchguidance.com/'
   }
 ];
+
 
 const ProjectSection = () => {
   return (

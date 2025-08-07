@@ -12,7 +12,7 @@ const projects = [
     description: 'Built a premium construction company website with a modern UI, interactive layouts, and responsive design.',
     tag: 'Real Estate',
     year: '2025',
-    image: '../src/assets/kdm.png',
+    image: '/kdm.png',
     link: 'https://kdm-construction.vercel.app/'
   },
   {
@@ -20,7 +20,7 @@ const projects = [
     description: 'Designed and developed a holistic wellness and spa platform with elegant visuals and smooth navigation.',
     tag: 'Wellness',
     year: '2025',
-    image: '../src/assets/Ayatti.png',
+    image: '/Ayatti.png',
     link: 'https://ayattiwellness.life/'
   },
   {
@@ -28,7 +28,7 @@ const projects = [
     description: 'Developed a robust academic support portal for PhD scholars, focusing on UX clarity and lead generation.',
     tag: 'Education',
     year: '2025',
-    image: '../src/assets/phd.png',
+    image: '/phd.png',
     link: 'https://phdresearchguidance.com/'
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     description: 'Created a dynamic coaching platform with user-friendly design and optimized performance for better engagement.',
     tag: 'Coaching',
     year: '2025',
-    image: '../src/assets/b4logo.png',
+    image: '/b4logo.png',
     link: 'https://www.b4tutorial.in/'
   },
   {
@@ -44,7 +44,7 @@ const projects = [
     description: 'Delivered a construction company website with impactful visuals, strategic branding, and mobile responsiveness.',
     tag: 'Construction',
     year: '2025',
-    image: '../src/assets/jhlogo.png',
+    image: '/jhlogo.png',
     link: 'https://www.jhgroups.in/'
   },
   {
@@ -52,7 +52,7 @@ const projects = [
     description: 'Built a sleek two-wheeler dealership website highlighting product catalogs, service info, and contact features.',
     tag: 'Automobile',
     year: '2025',
-    image: '../src/assets/a5logo.png',
+    image: '/a5logo.png',
     link: 'https://www.a5motors.in/'
   },
   {
@@ -60,10 +60,11 @@ const projects = [
     description: 'Designed a stylish website for an interior design firm, focusing on visual storytelling, elegance, and modern UX.',
     tag: 'Interior Design',
     year: '2025',
-    image: '../src/assets/vibewoods.png',
+    image: '/vibewoods.png',
     link: 'https://vibewoods.in/'
   }
 ];
+
 
 const allTags = ['All', ...Array.from(new Set(projects.map(p => p.tag)))];
 
