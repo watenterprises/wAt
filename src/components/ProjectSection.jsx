@@ -4,31 +4,30 @@ import styles from './ProjectSection.module.css';
 
 const projects = [
   {
-    title: 'CPP — Demand Generation',
-    description: 'Account-based demand gen strategy that resulted in 200% increase in inbound calls.',
-    tag: 'B2B SaaS',
-    year: '2024',
-    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+    title: 'KDM Construction',
+    description: 'Built a premium construction company website with a modern UI, interactive layouts, and responsive design.',
+    tag: 'Real Estate',
+    year: '2025',
+    image: '../src/assets/kdm.png',
+    link: 'https://kdm-construction.vercel.app/'
   },
   {
-    title: 'LogicFlow — Performance SEO',
-    description: 'Built a content-led SEO engine that increased lead volume by 350%.',
-    tag: 'Tech',
-    year: '2023',
-    image: 'https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+    title: 'Ayatti Wellness',
+    description: 'Designed and developed a holistic wellness and spa platform with elegant visuals and smooth navigation.',
+    tag: 'Wellness',
+    year: '2025',
+    image: '../src/assets/Ayatti.png',
+    link: 'https://ayattiwellness.life/'
   },
   {
-    title: 'Finora — Funnels & Ads',
-    description: 'Scaled paid LinkedIn and Google campaigns across EMEA to drive MQL growth.',
-    tag: 'Finance',
-    year: '2024',
-    image: 'https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+    title: 'PhD Research Guidance',
+    description: 'Developed a robust academic support portal for PhD scholars, focusing on UX clarity and lead generation.',
+    tag: 'Education',
+    year: '2025',
+    image: '../src/assets/phd.png',
+    link: 'https://phdresearchguidance.com/'
   }
 ];
-const palette = {
-  indigo: "#6366f1",
-  indigoLight: "#a5b4fc"
-};
 
 const ProjectSection = () => {
   return (
@@ -47,12 +46,13 @@ const ProjectSection = () => {
             Our <span className={styles.indigoTextGlow}>Recent Work</span>
           </h2>
           <p className={styles.subheading}>
-            Projects that drove extraordinary pipeline<br className={styles.mobileBreak}/> and predictable revenue.
+            Projects that drove extraordinary engagement<br className={styles.mobileBreak}/> and stunning user experience.
           </p>
         </div>
+
         <div className={styles.projectGrid}>
           {projects.map((proj, idx) => (
-            <div key={idx} className={styles.projectCard}>
+            <a href={proj.link} target="_blank" rel="noopener noreferrer" key={idx} className={styles.projectCard}>
               <div className={styles.imageArea}>
                 <img src={proj.image} alt={proj.title}/>
                 <div className={styles.cardBlurBg} />
@@ -65,9 +65,10 @@ const ProjectSection = () => {
                 <h3 className={styles.projectTitle}>{proj.title}</h3>
                 <p className={styles.projectDesc}>{proj.description}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
+
         <div className={styles.ctaWrapper}>
           <Link to="/projects" className={styles.btnPrimary}>
             <span>Explore More Projects</span>
